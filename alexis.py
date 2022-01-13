@@ -6,7 +6,7 @@ import csv
 from mdtable import MDTable
 import os
 
-def getAfter(text, word):
+def getAfter(text, word):    #fonction qui permet de capturer le mots apres d'un caractere donnee 
 	splited = text.split(word,1)
 	if len(splited) > 0:
 		return text.split(word,1)[1].strip().split(' ')[0].strip()
@@ -36,21 +36,21 @@ class request:
 requests = []
 lines = []
 for line in Lines:
-	if not line.startswith((' ', '\t')) and "Flags" in line:
+	if not line.startswith((' ', '\t')) and "Flags" in line: #si la ligne ya pas un tab et de flag elle n'est pas compté 
 		requests.append(request(line.strip().split(' ')[0],
 			getAfter(line, line.strip().split(' ')[1]),
-			getAfter(line, ">").replace(':', ''),
-			getAfter(line, "Flags").replace('[', '').replace('],', ''),
+			getAfter(line, ">").replace(':', ''), #adresse destination 
+			getAfter(line, "Flags").replace('[', '').replace('],', ''), # Flags [P.], supprime la virgule apres le mots 
 			getAfter(line, "length").replace(':', ''),
 			line.strip().split(' ')[1]))
 
-with open('result.csv', 'w', encoding='UTF8') as f:
+with open('result.csv', 'w', encoding='UTF8') as f: # cree le fichier resultat en .csv
 	writer = csv.writer(f)
 	writer.writerow(['Hour', 'Source', 'Destination', 'Flag', 'Length', 'Protocol'])
 	for req in requests:
 		writer.writerow([req.hour, req.source, req.dest, req.flag, req.length, req.protocol])
 
-remove_empty_lines("result.csv")
+remove_empty_lines("result.csv") # enleve les lignes vides sur le fichier csv
 
 markdown_string_table = MDTable('result.csv').get_table()
 f = open("result.md", "w")
