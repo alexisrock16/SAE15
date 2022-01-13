@@ -1,0 +1,10 @@
+
+LANCER LE PROG
+aller dans le repertoire du prog
+en haut a gauche fichier > lancer power shell
+ecrire "python .\alexis.py
+
+Pour ouvrir correctement FICHIER csv -->  fichier exel 
+dans exel aller dans :
+SELECTIONNER LA PREMIERE COLONNE
+Aller dans DOnnees -> convertir > delimite > SEPARATEUR ,  > 
