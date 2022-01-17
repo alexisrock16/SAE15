@@ -8,3 +8,11 @@ Pour ouvrir correctement FICHIER csv -->  fichier exel
 dans exel aller dans :
 SELECTIONNER LA PREMIERE COLONNE
 Aller dans DOnnees -> convertir > delimite > SEPARATEUR ,  > 
+
+=NB.SI(B1:B10767;"BP-Linux8*.*")
+savoir le nb de bp
+
+savoir le nombre de p.
+=NB.SI(D11:D10764;"P.")
+
+en moins de 2 min il se connecte + de 6000 fois bplinux

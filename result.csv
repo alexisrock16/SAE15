@@ -1,4 +1,4 @@
-Hour,Source,Destination,Flag,Length,Protocol
+heure,Source,Destination,Flag,Length,Protocole
 11:42:04.766656,BP-Linux8.ssh,192.168.190.130.50019,P.,108,IP
 11:42:04.766694,BP-Linux8.ssh,192.168.190.130.50019,P.,36,IP
 11:42:04.766723,BP-Linux8.ssh,192.168.190.130.50019,P.,108,IP
